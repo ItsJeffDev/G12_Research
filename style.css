@@ -1,0 +1,46 @@
+/*body*/
+
+body{
+    background: linear-gradient(to bottom, #fff2a8, rgb(255, 255, 255));
+    height: 100vh;
+}
+
+/* Nav */
+#nav{
+    background: linear-gradient(to bottom, #ED8B00, #ff782a);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.mouse{
+    cursor: pointer;
+}
+
+/* Override Bootstrap animation */
+
+.offcanvas-start {
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    background: linear-gradient(to bottom, #ED8B00, white);
+}
+
+.offcanvas-start.show {
+    transform: translateX(0);
+}
+
+/* Custom exit class */
+.offcanvas-start.hide-anim {
+    transform: translateX(-100%);
+}
+
+/* Backdrop fade */
+.offcanvas-backdrop {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.offcanvas-backdrop.show {
+    opacity: 0.5;
+}

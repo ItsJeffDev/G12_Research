@@ -1,24 +1,12 @@
+const toggleBtn = document.getElementById("menuToggle");
+const closeBtn = document.getElementById("closeBtn");
+const offcanvas = document.getElementById("offcanvasNav");
 const body = document.body;
 
-const offcanvas = document.getElementById('offcanvasNav');
-const closeBtn = document.getElementById('closeBtn');
-
-let offcanvasInstance = bootstrap.Offcanvas.getOrCreateInstance(offcanvas);
-
-// Intercept the close button
-closeBtn.addEventListener('click', () => {
-    offcanvas.classList.remove('show');
-    offcanvas.classList.add('hide-anim');
-
-    // Wait for animation to finish before hiding completely
-    setTimeout(() => {
-        offcanvas.classList.remove('hide-anim');
-        offcanvasInstance.hide(); // Properly hide with Bootstrap
-    }, 400); // Match CSS transition duration
+toggleBtn.addEventListener("click", () => {
+  offcanvas.classList.add("show");
 });
 
-
-
-function main() {
-    body.innerHTML = ` `
-};
+closeBtn.addEventListener("click", () => {
+  offcanvas.classList.remove("show");
+});

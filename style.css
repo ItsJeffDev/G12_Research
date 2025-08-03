@@ -38,22 +38,12 @@ body {
   transition: all 0.5s ease;
 }
 
-@media (max-width: 768px) {
-  .brand:hover {
-  transform: scale(0.5);
-}
-
-.brand:active {
-  transform: scale(0.5);
-}
-}
-
 .brand:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 
 .brand:active {
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 
 .toggle-btn {

@@ -40,11 +40,11 @@ body {
 
 @media (max-width: 768px) {
   .brand:hover {
-  transform: scale(1.05);
+  transform: scale(0.5);
 }
 
 .brand:active {
-  transform: scale(1.05);
+  transform: scale(0.5);
 }
 }
 

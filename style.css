@@ -38,6 +38,16 @@ body {
   transition: all 0.5s ease;
 }
 
+@media (max-width: 768px) {
+  .brand:hover {
+  transform: scale(1.05);
+}
+
+.brand:active {
+  transform: scale(1.05);
+}
+}
+
 .brand:hover {
   transform: scale(1.3);
 }

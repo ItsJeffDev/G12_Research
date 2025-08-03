@@ -214,7 +214,7 @@ body {
   border-radius: 30px;
   cursor: pointer;
   margin: 10px;
-  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet);
+  background: linear-gradient(270deg, yellow, orange, #ff782a );
   background-size: 400% 400%;
   animation: gradientShift 6s ease infinite;
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);

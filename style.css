@@ -159,6 +159,12 @@ body {
   margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+  .main-heading{
+    font-size: 1.4em;
+  }
+}
+
 .intro-text {
   font-size: 1.1em;
   line-height: 1.8em;

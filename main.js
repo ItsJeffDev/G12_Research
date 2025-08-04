@@ -11,21 +11,19 @@ closeBtn.addEventListener("click", () => {
   offcanvas.classList.remove("show");
 });
 
-function toggleLanguage() {
-  // Check if the checkbox is turned on (checked)
-  const isTagalog = document.getElementById("langToggle").checked;
+function decodeHTML(html) {
+  const txt = document.createElement('textarea');
+  txt.innerHTML = html;
+  return txt.value;
+}
 
-  // Select all elements that have data-en attributes
+function toggleLanguage() {
+  const isTagalog = document.getElementById("langToggle").checked;
   const elements = document.querySelectorAll("[data-en]");
 
-  // For each of those elements...
   elements.forEach(el => {
-    // Change the visible text based on checkbox state
-    if (isTagalog) {
-      el.textContent = el.getAttribute("data-tl"); // Show Tagalog
-    } else {
-      el.textContent = el.getAttribute("data-en"); // Show English
-    }
+    const html = el.getAttribute(isTagalog ? "data-tl" : "data-en");
+    el.innerHTML = decodeHTML(html);
   });
 }
 

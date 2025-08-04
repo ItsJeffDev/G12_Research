@@ -24,8 +24,9 @@ body {
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .brand {
@@ -47,16 +48,14 @@ body {
 }
 
 .side {
-  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: row;
   gap: 20px;
 }
 
 #langToggle {
   appearance: none;
+  display: flex;
   width: 39px;
   height: 39px;
   background-image: url('/images/translator.png');
@@ -87,7 +86,9 @@ body {
 /* Desktop nav */
 .nav-links {
   list-style: none;
+  flex: 1;
   display: flex;
+  justify-content: end;
   gap: 25px;
 }
 

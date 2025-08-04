@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>OOPSphere</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="/images/orange_icon.png">
+  <link rel="icon" type="images" href="/images/orange_icon.png">
 </head>
 <body>
 
@@ -13,8 +13,12 @@
 <nav class="navbar">
   <div class="nav-container">
     <a class="brand">OOPSphere</a>
-    <button class="toggle-btn" id="menuToggle">&#9776;</button>
-
+    <div class="side">
+      <input type="checkbox" style="background-image: url('/images/translator.png');" id="langToggle" onchange="toggleLanguage()">
+      <button class="toggle-btn" id="menuToggle">&#9776;</button>
+    </div>
+    
+    
     <ul class="nav-links desktop" style="text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666, 1px 1px #000000;">
       <li><a href="#">Home</a></li>
       <li><a href="#">Topics</a></li>
@@ -40,7 +44,7 @@
 
 <!-- Main Content -->
 <div class="main-content">
-  <h1 class="main-heading">Welcome to OOPSphere!</h1>
+  <h1 data-en="Welcome to OOPSphere!" data-tl="Maligayang pagdating sa OOPSphere!" class="main-heading">Welcome to OOPSphere!</h1>
 
   <p class="intro-text">
     Struggling with <strong>Object-Oriented Programming (OOP)?</strong> You're not alone.

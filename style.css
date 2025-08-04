@@ -16,7 +16,7 @@ body {
 .navbar {
   background: linear-gradient(to bottom, #ED8B00, #ff782a);
   color: white;
-  padding: 15px 90px;
+  padding: 15px 80px;
   position: relative;
   overflow: hidden;
   transition: all 0.5s ease;
@@ -29,7 +29,7 @@ body {
 }
 
 .brand {
-  font-size: 17px;
+  font-size: 18px;
   padding-bottom: 5px;
   font-weight: bold;
   color: white;
@@ -44,6 +44,30 @@ body {
 
 .brand:active {
   transform: scale(1.1);
+}
+
+.side {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#langToggle {
+  appearance: none;
+  width: 39px;
+  height: 39px;
+  background-image: url('/images/translator.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+#langToggle:checked {
+  filter: brightness(1.5);
 }
 
 .toggle-btn {
@@ -77,6 +101,8 @@ body {
 .nav-links a:hover {
   color: #ff5e00;
 }
+
+#langToggle {}
 
 /* Offcanvas (Mobile Menu) */
 .offcanvas {
@@ -160,8 +186,8 @@ body {
 }
 
 @media (max-width: 768px) {
-  .main-heading{
-    font-size: 1.4em;
+  .main-heading {
+    font-size: 1.3em;
   }
 }
 
@@ -220,7 +246,7 @@ body {
   border-radius: 30px;
   cursor: pointer;
   margin: 10px;
-  background: linear-gradient(270deg, yellow, orange, #ff782a );
+  background: linear-gradient(270deg, yellow, orange, #ff782a);
   background-size: 400% 400%;
   animation: gradientShift 6s ease infinite;
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
@@ -231,9 +257,11 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }

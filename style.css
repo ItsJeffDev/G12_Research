@@ -30,7 +30,7 @@ body {
 }
 
 .brand {
-  font-size: 18px;
+  font-size: 18.5px;
   padding-bottom: 5px;
   font-weight: bold;
   color: white;
@@ -59,9 +59,8 @@ body {
   width: 39px;
   height: 39px;
   background-image: url('things/translator.png');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  border: none;
   cursor: pointer;
 }
 

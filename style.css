@@ -58,7 +58,7 @@ body {
   display: flex;
   width: 39px;
   height: 39px;
-  background-image: url('/images/translator.png');
+  background-image: url('/things/translator.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;

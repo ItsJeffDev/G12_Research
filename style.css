@@ -102,8 +102,6 @@ body {
   color: #ff5e00;
 }
 
-#langToggle {}
-
 /* Offcanvas (Mobile Menu) */
 .offcanvas {
   position: fixed;
@@ -168,15 +166,6 @@ body {
 }
 
 /* Main content */
-
-.main-content {
-  padding: 20px 20px;
-  max-width: 800px;
-  margin: auto;
-  text-align: center;
-  color: #333;
-  border-radius: 12px;
-}
 
 .main-heading {
   font-size: 2em;

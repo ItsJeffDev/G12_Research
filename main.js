@@ -25,7 +25,26 @@ function toggleLanguage() {
     const html = el.getAttribute(isTagalog ? "data-tl" : "data-en");
     el.innerHTML = decodeHTML(html);
   });
+  
+  localStorage.setItem("language", isTagalog ? "tagalog" : "english");
 }
+
+// Load language preference from localStorage and apply it
+function loadLanguagePreference() {
+  const savedLanguage = localStorage.getItem("language");
+
+  if (savedLanguage === "tagalog") {
+    langToggle.checked = true;
+  } else {
+    langToggle.checked = false;
+  }
+
+  toggleLanguage(); // Apply language text to the page
+}
+
+langToggle.addEventListener("change", toggleLanguage);
+
+window.addEventListener("DOMContentLoaded", loadLanguagePreference);
 
 // JavaScript checks if the checkbox is checked.
 

@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 body {
@@ -176,13 +175,18 @@ body {
 
 @media (max-width: 768px) {
   .main-heading {
-    font-size: 1.3em;
+    font-size: 1.5em;
   }
+}
+
+.main-content p{
+  line-height: 2em;
+  margin-bottom: 1rem;
 }
 
 .intro-text {
   font-size: 1.1em;
-  line-height: 1.8em;
+  line-height: 2.3em;
   margin-bottom: 20px;
   padding: 0 10px;
 }

@@ -2,19 +2,185 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OOPSphere | Video Tutorials</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="images" href="things/orange_icon.png">
+  <style>
+    body{
+      background-color: white;
+    }
+    .main-content {
+      padding: 20px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      color: #333;
+      border-radius: 12px;
+      background-color: white;
+      margin-top: 20px;
+      box-shadow: 4px 5px 15px 5px #000000;
+      transition: all 0.5s;
+    }
+    .main-content:hover{
+      transform: scale(1.005);
+      box-shadow: 2px 2px 5px 2px #000000;
+    }
+  </style>
 </head>
 
 <body>
-    <div style="display: flex; justify-content: bottom; align-items: center; flex-direction: column; margin: auto;">
-        <h1> Dai Pa Tapos</h1>
-        <a class="btn-start" href="literature.html" style="text-decoration: none;">
-            <strong style="color: rgb(247, 35, 35)">Back</strong>
-        </a>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a class="brand">OOPSphere</a>
+
+      <div class="side">
+        <input type="checkbox" id="langToggle">
+        <button class="toggle-btn" id="menuToggle">&#9776;</button>
+      </div>
+      <ul class="nav-links desktop"
+        style="text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666, 1px 1px #000000;">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Topics</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
     </div>
+  </nav>
+
+  <!-- Offcanvas Mobile Menu -->
+  <div class="offcanvas" id="offcanvasNav">
+    <div class="offcanvas-header">
+      <h2 style="text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666, 1px 1px #000000;">Menu</h2>
+      <button id="closeBtn">&times;</button>
+    </div>
+
+    <ul class="offcanvas-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="category.html">Topics</a></li>
+      <li><a href="#">Resources</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1 data-en="OOP Literature" data-tl="Java Programming: Object-Oriented Programming (OOP) Tutorials" class="main-heading">Java Programming: Object-Oriented Programming (OOP) Tutorials</h1>
+
+    <p data-en="<strong>ENGLISH VERSION </strong>" 
+      data-tl=" <strong>Wika: Tagalog & English</strong> <br> Manood ng mga video na may sunud-sunod na gabay. I-click ang mga link sa ibaba. Mag-aral nang mabuti at mag-enjoy sa pagkatuto!"
+      class="intro-text">
+
+    <p style="text-align: center;" data-en=" <strong>Module - Introduction To OOP</strong><br> Link: <a href='https://www.scribd.com/document/692318176/Module-1-Introduction-to-OOP'>https://www.scribd.com/document/692318176/Module-1-Introduction-to-OOP</a>"   
+    data-tl="<strong>Ano ang Coding at Programming?</strong> "></p>
+
+    </p> <br><hr>
+
+    <p style="text-align: left;" data-en=" <br> <strong>Object-Oriented Programming (OOP) – Core Modules (Summary)</strong>"
+    data-tl=""></p>
+
+    <p style="text-align: left;" data-en=" Author: Durgesh Kumar Singh <a href='www.slideshare.net' target='_blank'>www.slideshare.net</a> "
+    data-tl=""></p>
+
+    <p style="text-align: left;" data-en="<strong> 1. Overview of OOP </strong>"
+    data-tl=""></p>
+
+    <p style="text-align: left;" data-en=" <strong> • </strong> Explains OOP principles in the context of .NET and C#."
+    data-tl=""> </p>
+
+    <p style="text-align: left;" data-en=" <strong> • </strong> Describes the concept of an <strong>object</strong> as a unit combining data (fields) and behavior (methods)."
+    data-tl=""> </p>
+
+    <p style="text-align: left;" data-en=" <strong> • </strong> Highlights key pillars of OOP: <strong>Encapsulation,</strong>Inheritance,<strong> Polymorphism,</strong> and <strong>Reusability</strong>."
+    data-tl=""> </p>
+
+    <p style="text-align: left;" data-en="<strong> 2. Classes & Objects </strong>"
+    data-tl=""></p>
+
+    <p style="text-align: left;" data-en=" <strong> • </strong> How to define classes, fields, and methods."
+    data-tl=""> </p>
+
+    <p style="text-align: left;" data-en=" <strong> • </strong> How to <strong>instantiate objects</strong> and the role of the new keyword."
+    data-tl=""> </p>
+
+    <p style="text-align: left;" data-en=" <strong> • </strong> Access modifiers (public, private, protected) and class attributes like static, abstract, sealed, and unsafe."
+    data-tl=""> </p>
+
+    <p style="text-align: left;" data-en="<strong> 3. Constructors & Destructors </strong>"
+    data-tl=""></p>
+
+    <p style="text-align: left;" data-en=" <strong> •  Constructors:</strong> Used for initializing objects; include parameterized, default, and static variants."
+    data-tl=""> </p>
+
+    <p style="text-align: left;" data-en=" <strong> •  Destructors:</strong>  Used for cleanup and resource management; invoked by the garbage collector."
+    data-tl=""> </p>
+
+    <p style="text-align: left;" data-en="<strong> 4. Function Overloading </strong>"
+    data-tl=""></p>
+
+    <p style="text-align: left;" data-en=" <strong> • </strong>  Multiple methods with the same name but different parameters (signature)."
+    data-tl=""> </p>
+
+    <p style="text-align: left;" data-en=" <strong> • </strong>  Overloading is based on parameter count or type—not return type."
+    data-tl=""> </p>
+
+    <p style="text-align: left;" data-en="<strong> 5. Encapsulation</strong>"
+    data-tl=""></p>
+
+    <p style="text-align: left;" data-en=" <strong> • </strong>  Bundles data and methods in a protective structure."
+    data-tl=""> </p>
+
+    <p style="text-align: left;" data-en=" <strong> • </strong>  Restricts access to an object's internal state (information hiding)."
+    data-tl=""> </p>
+
+    <p style="text-align: left;" data-en="<strong> 6. Inheritance </strong>"
+    data-tl=""></p> 
+
+    <p style="text-align: left;" data-en=" <strong> • </strong>  Enables a new class (derived) to acquire characteristics from an existing class (base)."
+    data-tl=""></p>
+
+    <p style="text-align: left;" data-en=" <strong> • </strong>  Supports “is-a” relationships and enhances <strong>code reusability</strong>."
+    data-tl=""></p>
+
+    <p style="text-align: left;" data-en="<strong> 7. Polymorphism </strong>"
+    data-tl=""></p> 
+
+    <p style="text-align: left;" data-en=" <strong> • </strong>  Allows objects to be treated as instances of their base class, enabling method binding at runtime."
+    data-tl=""></p>
+
+    <p style="text-align: left;" data-en=" <strong> • </strong>  Methods can be overridden (dynamic binding) to provide specific behaviors."
+    data-tl=""></p>
+
+    <p style="text-align: left;" data-en="<strong> 8. Other Constructs </strong>"
+    data-tl=""></p> 
+
+    <p style="text-align: left;" data-en=" <strong> •  Partial Classes: </strong>  Spread class definitions across multiple files for collaborative development."
+    data-tl=""></p>
+
+    <p style="text-align: left;" data-en=" <strong> •  Static Classes & Methods: </strong>   Belong to the class itself, not instances."
+    data-tl=""></p>
+
+    <p style="text-align: left;" data-en=" <strong> •  Class Libraries (DLLs): </strong>  Reusable modules for wider application use."
+    data-tl=""></p>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 
 </html>
+
+
+
+<!--
+
+Nahihirapan kaba sa Object-Oriented Programming (OOP)? Hindi ka nag-iisa. Itong website ay iginawa para sa Iyo at para sa mga Mag-aaral sa Computer Systems Institute, Inc. na nais ng isang mas simple at mas epektibong paraan ng pag-aaral. Mag-browse ng mga maliit at madaling unawain na konsepto sa OOP at mga piniling, mataas na kalidad na mga resurso lahat sa isang lugar.
+
+
+Struggling with <strong>Object-Oriented Programming (OOP)?</strong> You're not alone.
+    This site is built for <strong>You</strong> and <strong>Students</strong> at <strong>Computer Systems Institute, Inc.</strong> want a simpler, more effective way to learn.
+    Browse bite-sized OOP concepts and curated, high-quality resources all in one place.
+
+-->

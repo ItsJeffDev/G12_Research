@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OOPSphere</title>
+  <link rel="icon" type="image/png" href="things/orange_icon.png" />
+  <style>
+    /* Base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to top, #ED8B00, white);
+      color: #333;
+      min-height: 100vh;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(to bottom, #ED8B00, #ff782a);
+      color: white;
+      padding: 15px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .brand {
+      font-size: 18.5px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000;
+      cursor: default;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ff5e00;
+    }
+
+    /* Main content */
+    .main-content {
+      padding: 20px;
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-heading {
+      font-size: 2.4em;
+      color: #ED8B00;
+      margin-bottom: 20px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .intro-text {
+      font-size: 1.1em;
+      line-height: 1.9em;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    /* Buttons */
+    .btn-start,
+    .btn-topic {
+      display: inline-block;
+      padding: 15px 40px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 10px 8px;
+      background: linear-gradient(270deg, yellow, orange, #ff782a);
+      background-size: 400% 400%;
+      animation: gradientShift 6s ease infinite;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-start:hover,
+    .btn-topic:hover {
+      filter: brightness(1.1);
+      transform: scale(1.05);
+    }
+
+    .btn-start:active,
+    .btn-topic:active {
+      transform: scale(0.95);
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Topic buttons container */
+    .topic-buttons {
+      margin-bottom: 40px;
+    }
+
+    /* Video embed */
+    .intro-video {
+      margin: 40px auto;
+      max-width: 100%;
+    }
+
+    /* Study guide */
+    .study-guide {
+      list-style: none;
+      text-align: left;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      font-size: 1.1em;
+      line-height: 1.8em;
+      padding-left: 20px;
+      color: #444;
+    }
+
+    .study-guide li {
+      background: white;
+      border-left: 6px solid #ED8B00;
+      padding: 10px 15px;
+      margin-bottom: 12px;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .study-guide li:hover {
+      border-left-width: 15px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .main-heading {
+        font-size: 1.8em;
+      }
+
+      .btn-start,
+      .btn-topic {
+        padding: 12px 30px;
+        font-size: 14px;
+        margin: 8px 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="brand">OOPSphere</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="category.html">Topics</a></li>
+      <li><a href="#">Resources</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1 class="main-heading">Welcome to OOPSphere!</h1>
+    <p class="intro-text">
+      Struggling with <strong>Object-Oriented Programming (OOP)?</strong> You're not alone. This site is built for
+      <strong>You</strong> and <strong>Students</strong> at <strong>Computer Systems Institute, Inc.</strong> who want a simpler,
+      more effective way to learn. Browse bite-sized OOP concepts and curated, high-quality resources all in one place.
+    </p>
+
+    <!-- Start and Practice Buttons -->
+    <div>
+      <a href="category.html" class="btn-start">🚀 Start Learning</a>
+      <a href="practice.html" class="btn-start">🧪 Practice Compiler</a>
+    </div>
+
+    <!-- OOP Topic Buttons -->
+    <div class="topic-buttons">
+      <a href="category.html#classes" class="btn-topic">🏷️ Classes & Objects</a>
+      <a href="category.html#inheritance" class="btn-topic">🔁 Inheritance</a>
+      <a href="category.html#encapsulation" class="btn-topic">🔐 Encapsulation</a>
+      <a href="category.html#polymorphism" class="btn-topic">🔄 Polymorphism</a>
+      <a href="category.html#abstraction" class="btn-topic">🧼 Abstraction</a>
+    </div>
+
+    <!-- Short Explanation / Video -->
+    <div class="intro-video">
+      <h3 style="color:#ED8B00; margin-bottom: 15px;">📽️ What is Object-Oriented Programming?</h3>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/pTB0EiLXUC8" title="What is OOP in Java"
+        frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Study Guide Checklist -->
+    <ul class="study-guide">
+      <li>✅ Understand Classes & Objects</li>
+      <li>✅ Learn Inheritance with examples</li>
+      <li>✅ Try coding in the Practice Compiler</li>
+      <li>✅ Apply OOP concepts in a mini project</li>
+    </ul>
+
+  </div>
+
+</body>
+
+</html>

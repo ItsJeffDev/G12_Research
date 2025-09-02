@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOPSphere</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="images" href="things/orange_icon.png">
+    <style>
+        .main-content {
+            padding: 20px 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            color: #333;
+            border-radius: 12px;
+        }
+
+        textarea {
+            font-family: monospace;
+            width: 100%;
+            max-width: 100%;
+            padding: 10px;
+            background: #272822;
+            color: #f8f8f2;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        pre {
+            background: #1e1e1e;
+            color: #00ff00;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="brand">OOPSphere</a>
+
+            <div class="side">
+                <input type="checkbox" id="langToggle" onchange="toggleLanguage()">
+                <button class="toggle-btn" id="menuToggle">&#9776;</button>
+            </div>
+            <ul class="nav-links desktop"
+                style="text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666, 1px 1px #000000;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="category.html">Topics</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvas" id="offcanvasNav">
+        <div class="offcanvas-header">
+            <h2 style="text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666, 1px 1px #000000;">Menu</h2>
+            <button id="closeBtn">&times;</button>
+        </div>
+        <ul class="offcanvas-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="category.html">Topics</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Java OOP Practice Compiler</h1>
+        <textarea id="code" rows="15" spellcheck="false">
+// Sample Java Code
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello from Java!");
+    }
+}
+    </textarea>
+        <br />
+        <button onclick="runCode()">Run Code</button>
+        <pre id="output">Output will appear here...</pre>
+
+    </div>
+
+    <script src="prac.js"></script>
+</body>
+
+</html>

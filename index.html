@@ -1,148 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OOPSphere</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="images" href="things/orange_icon.png">
-  <style>
-    .main-content {
-      padding: 20px 20px;
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      color: #333;
-      border-radius: 12px;
-    }
-
-    .btn-start,
-    .btn-topic {
-      display: inline-block;
-      padding: 15px 40px;
-      font-size: 16px;
-      font-weight: bold;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      margin: 10px 8px;
-      background: linear-gradient(270deg, yellow, orange, #ff782a);
-      background-size: 400% 400%;
-      animation: gradientShift 6s ease infinite;
-      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s ease;
-      text-decoration: none;
-    }
-
-    .btn-start:hover,
-    .btn-topic:hover {
-      filter: brightness(1.1);
-      transform: scale(1.05);
-    }
-
-    .btn-start:active,
-    .btn-topic:active {
-      transform: scale(0.95);
-    }
-
-    @keyframes gradientShift {
-      0% {
-        background-position: 0% 50%;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOPSphere</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="images" href="things/orange_icon.png" />
+    <style>
+      .main-content {
+        padding: 20px 20px;
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+        color: #333;
+        border-radius: 12px;
       }
 
-      50% {
-        background-position: 100% 50%;
+      .btn-start,
+      .btn-topic {
+        display: inline-block;
+        padding: 15px 40px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        margin: 10px 8px;
+        background: linear-gradient(270deg, yellow, orange, #ff782a);
+        background-size: 400% 400%;
+        animation: gradientShift 6s ease infinite;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease;
+        text-decoration: none;
       }
 
-      100% {
-        background-position: 0% 50%;
+      .btn-start:hover,
+      .btn-topic:hover {
+        filter: brightness(1.1);
+        transform: scale(1.05);
       }
-    }
 
-    /* Topic buttons container */
-    .topic-buttons {
-      margin-bottom: 40px;
-    }
-  </style>
-</head>
+      .btn-start:active,
+      .btn-topic:active {
+        transform: scale(0.95);
+      }
 
-<body>
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a class="brand">OOPSphere</a>
+        50% {
+          background-position: 100% 50%;
+        }
 
-      <div class="side">
-        <input type="checkbox" id="langToggle" onchange="toggleLanguage()">
-        <button class="toggle-btn" id="menuToggle">&#9776;</button>
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Topic buttons container */
+
+      .topic-buttons {
+        margin-bottom: 40px;
+      }
+
+      #btn_damn {
+        margin-top: 15px;
+        padding: 10px 20px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a class="brand">OOPSphere</a>
+
+        <div class="side">
+          <input type="checkbox" id="langToggle" onchange="toggleLanguage()" />
+          <button class="toggle-btn" id="menuToggle">&#9776;</button>
+        </div>
+        <ul
+          class="nav-links desktop"
+          style="
+            text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666,
+              1px 1px #000000;
+          "
+        >
+          <li><a href="index.html">Home</a></li>
+          <li><a href="category.html">Topics</a></li>
+          <li><a href="reference.html">Reference</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
       </div>
-      <ul class="nav-links desktop"
-        style="text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666, 1px 1px #000000;">
+    </nav>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvas" id="offcanvasNav">
+      <div class="offcanvas-header">
+        <h2
+          style="
+            text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666,
+              1px 1px #000000;
+          "
+        >
+          Menu
+        </h2>
+        <button id="closeBtn">&times;</button>
+      </div>
+      <ul class="offcanvas-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="category.html">Topics</a></li>
-        <li><a href="#">Resources</a></li>
+        <li><a href="reference.html">Reference</a></li>
         <li><a href="#">About</a></li>
       </ul>
     </div>
-  </nav>
-  
-  <!-- Offcanvas Mobile Menu -->
-  <div class="offcanvas" id="offcanvasNav">
-    <div class="offcanvas-header">
-      <h2 style="text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666, 1px 1px #000000;">Menu</h2>
-      <button id="closeBtn">&times;</button>
-    </div>
-    <ul class="offcanvas-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="category.html">Topics</a></li>
-      <li><a href="#">Resources</a></li>
-      <li><a href="#">About</a></li>
-    </ul>
-  </div>
 
-  <!-- Main Content -->
-  <div class="main-content">
-    <h1 data-en="Welcome to OOPSphere!" data-tl="Maligayang pagdating sa OOPSphere!" class="main-heading"> Welcome to
-      OOPSphere!</h1>
-    <p data-en=" Struggling with <strong>Object-Oriented Programming (OOP)?</strong> You're not alone.
+    <!-- Main Content -->
+    <div class="main-content">
+      <h1
+        data-en="Welcome to OOPSphere!"
+        data-tl="Maligayang pagdating sa OOPSphere!"
+        class="main-heading"
+      >
+        Welcome to OOPSphere!
+      </h1>
+      <p
+        data-en=" Struggling with <strong>Object-Oriented Programming (OOP)?</strong> You're not alone.
     This site is built for <strong>You</strong> and <strong>Students</strong> at <strong>Computer Systems Institute, Inc.</strong> want a simpler, more effective way to learn.
     Browse bite-sized OOP concepts and curated, high-quality resources all in one place. "
-      data-tl=" Nahihirapan kaba sa <strong>Object-Oriented Programming (OOP)?</strong> Hindi ka nag-iisa. Itong website ay iginawa para sa <strong>Iyo</strong> at para sa mga <strong>Mag-aaral</strong> sa <strong>Computer Systems Institute, Inc.</strong> na nais ng isang mas simple at mas epektibong paraan ng pag-aaral. Mag-browse ng mga maliit at madaling unawain na konsepto sa OOP at mga piniling, mataas na kalidad na mga resurso lahat sa isang lugar."
-      class="intro-text">
-    </p><br>
+        data-tl=" Nahihirapan kaba sa <strong>Object-Oriented Programming (OOP)?</strong> Hindi ka nag-iisa. Itong website ay iginawa para sa <strong>Iyo</strong> at para sa mga <strong>Mag-aaral</strong> sa <strong>Computer Systems Institute, Inc.</strong> na nais ng isang mas simple at mas epektibong paraan ng pag-aaral. Mag-browse ng mga maliit at madaling unawain na konsepto sa OOP at mga piniling, mataas na kalidad na mga resurso lahat sa isang lugar."
+        class="intro-text"
+      ></p>
+      <br />
+      <h3 style="color: #ed8b00; margin-bottom: 15px">📚 Topics</h3>
+      <div class="topic-buttons">
+        <a href="category.html#classes" class="btn-topic"
+          >🏷️ Classes & Objects</a
+        >
+        <a href="category.html#inheritance" class="btn-topic">🔁 Inheritance</a>
+        <a href="category.html#encapsulation" class="btn-topic"
+          >🔐 Encapsulation</a
+        >
+        <a href="category.html#polymorphism" class="btn-topic"
+          >🔄 Polymorphism</a
+        >
+        <a href="category.html#abstraction" class="btn-topic">🧼 Abstraction</a>
+      </div>
 
-    <div class="topic-buttons">
-      <a href="category.html#classes" class="btn-topic">🏷️ Classes & Objects</a>
-      <a href="category.html#inheritance" class="btn-topic">🔁 Inheritance</a>
-      <a href="category.html#encapsulation" class="btn-topic">🔐 Encapsulation</a>
-      <a href="category.html#polymorphism" class="btn-topic">🔄 Polymorphism</a>
-      <a href="category.html#abstraction" class="btn-topic">🧼 Abstraction</a>
+      <div class="intro-video">
+        <h3 style="color: #ed8b00; margin-bottom: 15px; text-align: center">
+          📽️ What is Object-Oriented Programming?
+        </h3>
+        <iframe
+          width="100%"
+          height="315"
+          src="https://www.youtube.com/embed/pTB0EiLXUC8"
+          title="What is OOP in Java"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <ul class="features-list">
+        <li>✅ <strong>No login required</strong></li>
+        <li>✅ <strong>Understand Classes & Objects</strong></li>
+        <li>✅ <strong>Just clean, focused learning</strong></li>
+        <li>
+          ✅
+          <strong style="font-size: 0.9rem"
+            >Try coding in the Practice Compiler
+          </strong>
+        </li>
+      </ul>
+      <div class="main-content">
+        <!-- Java Code Editor -->
+        <h3 style="color: #ffffff; margin-bottom: 15px">💻 Java Compiler</h3>
+        <textarea id="code" rows="15" spellcheck="false">
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World!!");
+    }
+}
+        </textarea>
+
+        <!-- User Input Box -->
+        <textarea
+          id="userInput"
+          rows="1"
+          placeholder="Enter input (e.g., 5)"
+          style="margin-top: 20px"
+        ></textarea>
+
+        <!-- Run Button -->
+        <button id="btn_damn" class="btn-start" onclick="runCode()">
+          Run Code
+        </button>
+
+        <!-- Output Display -->
+        <pre id="output">Output will appear here...</pre>
+      </div>
+      <br />
+      <hr />
+      <a style="text-decoration: none; color: whitesmoke" href="category.html"
+        ><button class="btn-start">Proceed</button></a
+      ><br/>
     </div>
-
-    <div class="intro-video">
-      <h3 style="color:#ED8B00; margin-bottom: 15px;">📽️ What is Object-Oriented Programming?</h3>
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/pTB0EiLXUC8" title="What is OOP in Java"
-        frameborder="0" allowfullscreen></iframe>
-    </div><br><hr><br>
-    <ul class="features-list">
-      <li>✅ <strong>No login required</strong></li>
-      <li>✅ <strong>Understand Classes & Objects</strong></li>
-      <li>✅ <strong>Just clean, focused learning</strong></li>
-      <li>✅ <strong>Try coding in the Practice Compiler </strong></li>
-    </ul><br><hr>
-        <a style="text-decoration: none; color: whitesmoke;" href="try.html"><button
-        class="btn-start">Practice</button></a><a style="text-decoration: none; color: whitesmoke;" href="category.html"><button
-        class="btn-start">Start</button></a>
-    <br>
-
-
-  </div>
-
-  <script src="main.js"></script>
-</body>
-
+    <script src="main.js">
+    </script>
+  </body>
 </html>

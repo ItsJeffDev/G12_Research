@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOPSphere</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="images" href="things/orange_icon.png" />
+    <style>
+      .main-content {
+        padding: 20px 20px;
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+        color: #333;
+        border-radius: 12px;
+      }
+
+      .btn-start,
+      .btn-topic {
+        display: inline-block;
+        padding: 15px 40px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        margin: 10px 8px;
+        background: linear-gradient(270deg, yellow, orange, #ff782a);
+        background-size: 400% 400%;
+        animation: gradientShift 6s ease infinite;
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease;
+        text-decoration: none;
+      }
+
+      .btn-start:hover,
+      .btn-topic:hover {
+        filter: brightness(1.1);
+        transform: scale(1.05);
+      }
+
+      .btn-start:active,
+      .btn-topic:active {
+        transform: scale(0.95);
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Topic buttons container */
+      .topic-buttons {
+        margin-bottom: 40px;
+      }
+
+      textarea {
+        font-family: monospace;
+        width: 100%;
+        padding: 10px;
+        background: #272822;
+        color: #f8f8f2;
+        border: none;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      #btn_damn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      pre {
+        background: #1e1e1e;
+        color: #00ff00;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+        max-height: 300px;
+        overflow-y: auto;
+      }
+
+      label {
+        margin-top: 10px;
+        display: block;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a class="brand">OOPSphere</a>
+
+        <div class="side">
+          <input type="checkbox" id="langToggle" onchange="toggleLanguage()" />
+          <button class="toggle-btn" id="menuToggle">&#9776;</button>
+        </div>
+        <ul
+          class="nav-links desktop"
+          style="
+            text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666,
+              1px 1px #000000;
+          "
+        >
+          <li><a href="index.html">Home</a></li>
+          <li><a href="category.html">Topics</a></li>
+          <li><a href="#">Reference</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvas" id="offcanvasNav">
+      <div class="offcanvas-header">
+        <h2
+          style="
+            text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666,
+              1px 1px #000000;
+          "
+        >
+          Menu
+        </h2>
+        <button id="closeBtn">&times;</button>
+      </div>
+      <ul class="offcanvas-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Topics</a></li>
+        <li><a href="#">Reference</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Java Code Editor -->
+      <label for="code">Java Code:</label>
+      <textarea id="code" rows="15" spellcheck="false">
+// Sample Java code
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        System.out.println("You entered: " + x);
+    }
+}
+        </textarea
+      >
+
+      <!-- User Input Box -->
+      <label for="userInput">Program Input:</label>
+      <textarea
+        id="userInput"
+        rows="4"
+        placeholder="Enter input (e.g., 5)"
+      ></textarea>
+
+      <!-- Run Button -->
+      <button id="btn_damn" onclick="runCode()">Run Code</button>
+
+      <!-- Output Display -->
+      <pre id="output">Output will appear here...</pre>
+    </div>
+    <script src="prac.js"></script>
+  </body>
+</html>

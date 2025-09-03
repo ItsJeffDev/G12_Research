@@ -66,7 +66,7 @@
                 style="text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666, 1px 1px #000000;">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="category.html">Topics</a></li>
-                <li><a href="#">Resources</a></li>
+                <li><a href="reference.html">Reference</a></li>
                 <li><a href="#">About</a></li>
             </ul>
         </div>
@@ -81,7 +81,7 @@
         <ul class="offcanvas-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="category.html">Topics</a></li>
-            <li><a href="#">Resources</a></li>
+            <li><a href="reference.html">Reference</a></li>
             <li><a href="#">About</a></li>
         </ul>
     </div>
@@ -90,10 +90,14 @@
     <div class="main-content">
         <h1>Java OOP Practice Compiler</h1>
         <textarea id="code" rows="15" spellcheck="false">
-// Sample Java Code
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello from Java!");
+        Scanner sc = new Scanner(System.in);
+        
+        int age = sc.nextInt();
+        System.out.println(age);
     }
 }
     </textarea>
@@ -107,3 +111,5 @@ public class Main {
 </body>
 
 </html>
+
+

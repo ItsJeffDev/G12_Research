@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OOPSphere | Literature</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="images" href="things/orange_icon.png">
+  <style>
+    body{
+      background-color: white;
+    }
+    .main-content {
+      padding: 20px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      color: #333;
+      border-radius: 12px;
+      background-color: white;
+      margin-top: 20px;
+      box-shadow: 4px 5px 15px 5px #000000;
+      transition: all 0.5s;
+    }
+    .main-content:hover{
+      transform: scale(1.005);
+      box-shadow: 2px 2px 5px 2px #000000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a class="brand">OOPSphere</a>
+
+      <div class="side">
+        <input type="checkbox" id="langToggle">
+        <button class="toggle-btn" id="menuToggle">&#9776;</button>
+      </div>
+      <ul class="nav-links desktop"
+        style="text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666, 1px 1px #000000;">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Topics</a></li>
+        <li><a href="reference.html">Reference</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Offcanvas Mobile Menu -->
+  <div class="offcanvas" id="offcanvasNav">
+    <div class="offcanvas-header">
+      <h2 style="text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666, 1px 1px #000000;">Menu</h2>
+      <button id="closeBtn">&times;</button>
+    </div>
+
+    <ul class="offcanvas-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="category.html">Topics</a></li>
+      <li><a href="reference.html">Reference</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1 data-en="OOP Sample Problems" data-tl="OOP Sample Problems" class="main-heading"></h1>
+    
+    </p> <br><hr>
+
+    <h3 style="text-align: left;" data-en=" <br> <strong>PROBLEM #2</strong>"
+    data-tl="<br> <strong>PROBLEM #2</strong>"></h3>
+
+    <p style="text-align: left; margin-top: 10px; color: red" data-en=" if (age >= 60) { <br>
+ finalPrice *= 0.50; // 50% discount <br>
+} else if (age <= 18) { <br>
+ finalPrice *= 0.88; // 12% discount
+} " data-tl="if (age >= 60) { <br>
+ finalPrice *= 0.50; // 50% discount <br>
+} else if (age <= 18) { <br>
+ finalPrice *= 0.88; // 12% discount
+}"></p>
+
+    <p style="text-align: left; margin-left: 25px;" data-en="<b> • </b> Senior citizen (60+): 50% off"
+    data-tl="<b> • </b> Senior citizen (60+): 50% off"></p>
+
+    <p style="text-align: left; margin-left: 25px;" data-en="<b> • </b> Bata (18 below): 12% of"
+    data-tl="<b> • </b> Bata (18 below): 12% of"></p>
+
+    <h4 style="text-align: left;" data-en="<strong>Saving Ticket Info</strong>"
+    data-tl="<strong>Saving Ticket Info</strong>"></h4>
+
+    <p style="text-align: left; margin-top: 10px; color: red" data-en=" csnames[purchasesold] = name;<br>
+csages[purchasesold] = age;<br>
+movieprices[purchasesold] = finalPrice;<br>
+purchasesold++; <br> <span style='color: #333;'> Nasa-save ang bawat transaction sa arrays. </span> " data-tl="csnames[purchasesold] = name;<br>
+csages[purchasesold] = age;<br>
+movieprices[purchasesold] = finalPrice;<br>
+purchasesold++; <br> <span style= 'color: #333;'> Nasa-save ang bawat transaction sa arrays. </span>"></p><br>
+
+    <h4 style="text-align: left;" data-en="<strong>Continue Buying?</strong>"
+    data-tl="<strong>Continue Buying?</strong>"></h4><br>
+
+    <p style="text-align: left;" data-en='<span style="color: red">System.out.print("Do you want to buy another ticket? (y/n): ");</span><br>
+Kapag hindi y, tapos na ang pagbili ng ticket.'
+    data-tl='<span style="color: red">System.out.print("Do you want to buy another ticket? (y/n): ");</span><br>
+Kapag hindi y, tapos na ang pagbili ng ticket.'></p>
+
+    <h4 style="text-align: left;" data-en="<strong>[2] View Sales Report</strong>"
+    data-tl="<strong>[2] View Sales Report</strong>"></h4>
+
+    <p style="text-align: left; margin-left: 25px; color: red;" data-en="<b>•</b> Total tickets <br>
+<b>•</b> Total earnings<br>
+<b>•</b> Tickets sold per movie"
+    data-tl="<b>•</b> Total tickets <br>
+<b>•</b> Total earnings<br>
+<b>•</b> Tickets sold per movie"></p>
+
+    <h4 style="text-align: left;" data-en="<strong>[3] Exit</strong>"
+    data-tl="<strong>[3] Exit</strong>"></h4> 
+
+    <p style="text-align: left; margin-left: 25px; color: red;" data-en="case 3:
+ system = false;<br>
+Pinapatigil ang while (system) loop kaya lalabas na ang program."
+    data-tl="case 3:
+ system = false;<br>
+Pinapatigil ang while (system) loop kaya lalabas na ang program."></p>
+<br><hr><br>
+
+    <a href="category.html" style="text-decoration: none;"><li class="btn-start"> <strong style="color: rgb(247, 35, 35)">Back</strong></li></a>
+    <a href="reference.html" style="text-decoration: none; color: whitesmoke"><li class="btn-start"> <strong>Next</strong></li></a>
+
+
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
+
+
+
+<!--
+
+Nahihirapan kaba sa Object-Oriented Programming (OOP)? Hindi ka nag-iisa. Itong website ay iginawa para sa Iyo at para sa mga Mag-aaral sa Computer Systems Institute, Inc. na nais ng isang mas simple at mas epektibong paraan ng pag-aaral. Mag-browse ng mga maliit at madaling unawain na konsepto sa OOP at mga piniling, mataas na kalidad na mga resurso lahat sa isang lugar.
+
+
+Struggling with <strong>Object-Oriented Programming (OOP)?</strong> You're not alone.
+    This site is built for <strong>You</strong> and <strong>Students</strong> at <strong>Computer Systems Institute, Inc.</strong> want a simpler, more effective way to learn.
+    Browse bite-sized OOP concepts and curated, high-quality resources all in one place.
+
+-->

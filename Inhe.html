@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOPSphere | Literature</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="images" href="things/orange_icon.png" />
+    <style>
+      body {
+        background-color: white;
+      }
+      .main-content {
+        padding: 20px 20px;
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+        color: #333;
+        border-radius: 12px;
+        background-color: white;
+        margin-top: 20px;
+        box-shadow: 4px 5px 15px 5px #000000;
+        transition: all 0.5s;
+      }
+      .main-content:hover {
+        transform: scale(1.005);
+        box-shadow: 2px 2px px 2px #000000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a class="brand">OOPSphere</a>
+
+        <div class="side">
+          <input type="checkbox" id="langToggle" />
+          <button class="toggle-btn" id="menuToggle">&#9776;</button>
+        </div>
+        <ul
+          class="nav-links desktop"
+          style="
+            text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666,
+              1px 1px #000000;
+          "
+        >
+          <li><a href="index.html">Home</a></li>
+          <li><a href="category.html">Topics</a></li>
+          <li><a href="reference.html">Reference</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvas" id="offcanvasNav">
+      <div class="offcanvas-header">
+        <h2
+          style="
+            text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666,
+              1px 1px #000000;
+          "
+        >
+          Menu
+        </h2>
+        <button id="closeBtn">&times;</button>
+      </div>
+
+      <ul class="offcanvas-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Topics</a></li>
+        <li><a href="reference.html">Reference</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <h1
+        data-en="OOP Inheretance "
+        data-tl="OOP Inheretance"
+        class="main-heading"
+      ></h1>
+
+      <p
+        style="text-align: left"
+        data-en=" <b>LITERATURE OF Inheretance -</b> <a href='https://www.geeksforgeeks.org/java/inheritance-in-java/'> https://www.geeksforgeeks.org/java/inheritance-in-java </a> 
+        <br> - <a href='https://www.tutorialspoint.com/java/java_inheritance.htm'> https://www.tutorialspoint.com/java/java_inheritance.htm </a> &ThickSpace;- <a href='https://www.codecademy.com/resources/blog/what-is-inheritance'>https://www.codecademy.com/resources/blog/what-is-inheritance</a> - <br> <a href='https://algocademy.com/blog/understanding-inheritance-in-object-oriented-programming-a-comprehensive-guide'>https://algocademy.com/blog/understanding-inheritance-in-object-oriented-programming-a-comprehensive-guide</a>
+"
+        data-tl=" <b>LITERATURE OF POLYMORPHISM -</b> <a href='https://www.tutorialspoint.com/java/java_polymorphism.htm'> https://www.tutorialspoint.com/java/java_polymorphism.htm  </a> 
+        <br> - <a href='https://programguru.org/programming/polymorphism/'>https://programguru.org/programming/polymorphism/</a> &ThickSpace;- <a href='https://logicmojo.com/polymorphism-in-oops'>https://logicmojo.com/polymorphism-in-oops</a> - <br> <a href='https://www.codewithc.com/understanding-polymorphism-in-object-
+ oriented-programming/'> - https://www.codewithc.com/understanding-polymorphism-in-object-
+ oriented-programming/</a> "
+      ></p>
+      <p></p>
+      <hr />
+      <br />
+
+      <h3 style="text-align: left" data-en="SUMMARY" data-tl="SUMMARY"></h3>
+      <br />
+
+      <p
+        style="text-align: left"
+        data-en="Inheritance in Object-Oriented Programming (OOP) <br> <br> Inheritance is one of the core principles of Object-Oriented Programming (OOP). It refers to the mechanism 
+where a class, known as the child class or subclass, can derive attributes and behaviors (fields and 
+methods) from another class called the parent class or superclass. This concept establishes a natural 
+hierarchical relationship between classes and allows developers to reuse code, extend functionality, and 
+maintain cleaner programs."
+        data-tl=""
+      ></p>
+
+      <p style="text-align: left;" data-en="Benefits of Inheritance <br> 1. Code Reusability" data-tl=""></p>
+
+      <p style="text-align: left; margin-left: 25px;" data-en=" • Inheritance promotes the reuse of code by centralizing shared functionality in a superclass. 
+Instead of rewriting the same methods or variables across multiple classes, they can be inherited 
+and reused, leading to efficiency and reduced redundancy." data-tl=""></p>
+
+      <p style="text-align: left;" data-en="<br> 2. Improved Maintainability" data-tl=""></p>
+
+      <p style="text-align: left; margin-left: 25px;" data-en=" • IBecause shared code is placed in one location (the superclass), any updates or changes only need 
+to be made once. These changes automatically propagate to subclasses, reducing maintenance 
+effort and chances of inconsistency." data-tl=""></p>
+
+
+      <p style="text-align: left;" data-en="<br> 3. Hierarchy and Organization" data-tl=""></p>
+      
+      <p style="text-align: left; margin-left: 25px;" data-en=" • Inheritance allows developers to represent real-world relationships in code through a structured 
+hierarchy. General characteristics are placed at higher levels (parent class), while specific 
+characteristics are defined at lower levels (child classes). This improves the logical organization of 
+software systems." data-tl=""></p>
+
+      <p style="text-align: left;" data-en="<br> 4. Polymorphism" data-tl=""></p>
+
+      <p style="text-align: left; margin-left: 25px;" data-en=" • Polymorphism works hand in hand with inheritance by allowing methods in a subclass to override 
+those in the superclass. This provides flexibility, since the same method name can perform 
+different actions depending on which class object is being used." data-tl=""></p>
+
+      <p style="text-align: left;" data-en="<br> 5. Extensibility and Scalability" data-tl=""></p>
+
+      <p style="text-align: left; margin-left: 25px;" data-en=" • Systems built with inheritance are easier to expand. New subclasses can be created to extend 
+existing ones without altering the original code. This supports scalability and adaptability in larger 
+applications." data-tl=""></p>
+       
+      <p style="text-align: left;" data-en="<br> 6. Abstraction and Specialization" data-tl=""></p>
+     
+      <p style="text-align: left; margin-left: 25px;" data-en=" • Inheritance allows the abstraction of general features in a parent class, while child classes handle 
+specialized behaviors. This abstraction helps in building modular and understandable systems, 
+where general rules are defined once and reused by more specific classes." data-tl=""></p>
+
+      <p style="text-align: left;" data-en="<br> Types of Inheritance " data-tl=""></p>
+
+      <p style="text-align: left;" data-en=" 1. Single Inheritance " data-tl=""></p>
+
+      <p style="text-align: left; margin-left: 25px;" data-en=" • A subclass inherits from only one superclass. This is the simplest and most common type of 
+inheritance." data-tl=""></p>
+
+      <p style="text-align: left;" data-en=" 2. Multilevel Inheritance " data-tl=""></p>
+
+      <p style="text-align: left; margin-left: 25px;" data-en=" • A chain of inheritance where a subclass becomes the parent of another subclass, creating multiple 
+levels of inheritance." data-tl=""></p>
+
+      <p style="text-align: left;" data-en=" 3. Hierarchical Inheritance " data-tl=""></p>
+
+      <p style="text-align: left; margin-left: 25px;" data-en=" • Multiple subclasses inherit from the same superclass. Each subclass gains access to the shared 
+features of the parent but can also define unique ones." data-tl=""></p>
+
+      <p style="text-align: left;" data-en=" 4. Multiple Inheritance " data-tl=""></p>
+
+      <p style="text-align: left; margin-left: 25px;" data-en=" • A subclass can inherit from more than one superclass. While powerful, this can also lead to 
+complexity, such as conflicts when two parent classes have methods with the same name. Some 
+languages support this directly, while others allow it only through interfaces." data-tl=""></p>
+
+      <a href="literature_2.html" style="text-decoration: none"
+        ><li class="btn-start">
+          <strong style="color: rgb(247, 35, 35)">Back</strong>
+        </li></a
+      >
+      <a href="index.html" style="text-decoration: none; color: whitesmoke"
+        ><li class="btn-start"><strong>Home</strong></li></a
+      >
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+
+<!--
+
+Nahihirapan kaba sa Object-Oriented Programming (OOP)? Hindi ka nag-iisa. Itong website ay iginawa para sa Iyo at para sa mga Mag-aaral sa Computer Systems Institute, Inc. na nais ng isang mas simple at mas epektibong paraan ng pag-aaral. Mag-browse ng mga maliit at madaling unawain na konsepto sa OOP at mga piniling, mataas na kalidad na mga resurso lahat sa isang lugar.
+
+
+Struggling with <strong>Object-Oriented Programming (OOP)?</strong> You're not alone.
+    This site is built for <strong>You</strong> and <strong>Students</strong> at <strong>Computer Systems Institute, Inc.</strong> want a simpler, more effective way to learn.
+    Browse bite-sized OOP concepts and curated, high-quality resources all in one place.
+
+-->

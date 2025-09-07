@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOPSphere | Literature</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="images" href="things/orange_icon.png" />
+    <style>
+      body {
+        background-color: white;
+      }
+      .main-content {
+        padding: 20px 20px;
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+        color: #333;
+        border-radius: 12px;
+        background-color: white;
+        margin-top: 20px;
+        box-shadow: 4px 5px 15px 5px #000000;
+        transition: all 0.5s;
+      }
+      .main-content:hover {
+        transform: scale(1.005);
+        box-shadow: 2px 2px px 2px #000000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a class="brand">OOPSphere</a>
+
+        <div class="side">
+          <input type="checkbox" id="langToggle" />
+          <button class="toggle-btn" id="menuToggle">&#9776;</button>
+        </div>
+        <ul
+          class="nav-links desktop"
+          style="
+            text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666,
+              1px 1px #000000;
+          "
+        >
+          <li><a href="index.html">Home</a></li>
+          <li><a href="category.html">Topics</a></li>
+          <li><a href="reference.html">Reference</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvas" id="offcanvasNav">
+      <div class="offcanvas-header">
+        <h2
+          style="
+            text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666,
+              1px 1px #000000;
+          "
+        >
+          Menu
+        </h2>
+        <button id="closeBtn">&times;</button>
+      </div>
+
+      <ul class="offcanvas-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Topics</a></li>
+        <li><a href="reference.html">Reference</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+    <!-- Main Content -->
+    <div class="main-content">
+      <h1
+        data-en="OOP Encapsulation "
+        data-tl="OOP Encapsulation"
+        class="main-heading"
+      ></h1>
+
+      <p
+        style="text-align: left"
+        data-en=" <b>LITERATURE OF Encapsulation -</b> <a href='https://stackify.com/oop-concept-for-beginners-what-is-
+ encapsulation/'> https://stackify.com/oop-concept-for-beginners-what-is-
+ encapsulation </a> 
+        <br> - <a href='https://www.upgrad.com/blog/encapsulation-in-oops/'> https://www.upgrad.com/blog/encapsulation-in-oops </a> &ThickSpace;- <a href='https://www.scoutapm.com/blog/what-is-encapsulation'> https://www.scoutapm.com/blog/what-is-encapsulation </a> <br>
+"
+        data-tl=" <b>LITERATURE OF Encapsulation -</b> <a href='https://stackify.com/oop-concept-for-beginners-what-is-
+ encapsulation/'> https://stackify.com/oop-concept-for-beginners-what-is-
+ encapsulation </a> 
+        <br> - <a href='https://www.upgrad.com/blog/encapsulation-in-oops/'> https://www.upgrad.com/blog/encapsulation-in-oops </a> &ThickSpace;- <a href='https://www.scoutapm.com/blog/what-is-encapsulation'> https://www.scoutapm.com/blog/what-is-encapsulation </a> <br>
+ "
+      ></p>
+      <p></p>
+      <hr />
+      <br />
+
+      <h3 style="text-align: left" data-en="SUMMARY" data-tl="SUMMARY"></h3>
+      <br />
+
+      <p
+        style="text-align: left"
+        data-en="Understanding Encapsulation in Java"
+        data-tl=""
+      ></p>
+
+      <p
+        style="text-align: left"
+        data-en="What is Encapsulation?"
+        data-tl=""
+      ></p>
+
+      <p
+        style="text-align: left"
+        data-en="Encapsulation is one of the four core principles of Object-Oriented Programming (OOP). It refers to the 
+process of binding data (attributes) and methods (functions) together into a single unit called a class, while 
+also restricting direct access to the internal details of that class. In short, encapsulation hides the 
+complexity of the internal workings and only exposes what is necessary.<br> Think of it like a car: you use the steering wheel, pedals, and gear shift (public methods), but you do not directly 
+manipulate the engine or brakes (private data). This separation ensures safety, organization, and ease of 
+use."
+        data-tl=""
+      ></p>
+
+      <p
+        style="text-align: left"
+        data-en="Encapsulation in Java is mainly achieved by: <br> Declaring variables as private – ensures they cannot be directly accessed from outside the class.<br>
+Providing public getter and setter methods – controls how the private variables are accessed or modified.<br>
+Applying validation rules in setters – ensures that data remains valid before being assigned."
+        data-tl=""
+      ></p>
+
+      <p
+        style="text-align: left"
+        data-en="Key Components of Encapsulation <br> Data Hiding – Prevents external classes from accessing internal data directly.<br>
+Access Modifiers – Determines the scope of accessibility.<br>
+private → accessible only within the class.<br>
+default → accessible only within the package.<br>
+protected → accessible in class, package, and subclasses.<br>
+public → accessible everywhere."
+        data-tl=""
+      ></p>
+
+      <p style="text-align: left;" data-en="Benefits of Encapsulation <br> Encapsulation provides several important advantages in software development:<br>
+Data Protection – Ensures sensitive or critical data cannot be directly modified by outside code.<br>
+Improved Security – Protects internal implementation details from being misused.<br>
+Code Maintainability – Makes it easier to update or refactor code since changes inside a class don’t affect 
+external code.<br>
+Reusability – Encapsulated classes are modular and can be reused across different applications.
+Better Control – Allows developers to define rules and conditions for accessing or updating data." data-tl=""></p>
+
+      <a href="literature_2.html" style="text-decoration: none"
+        ><li class="btn-start">
+          <strong style="color: rgb(247, 35, 35)">Back</strong>
+        </li></a
+      >
+      <a href="index.html" style="text-decoration: none; color: whitesmoke"
+        ><li class="btn-start"><strong>Home</strong></li></a
+      >
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+
+<p style="text-align: left" data-en="" data-tl=""></p>
+
+<!--
+
+Nahihirapan kaba sa Object-Oriented Programming (OOP)? Hindi ka nag-iisa. Itong website ay iginawa para sa Iyo at para sa mga Mag-aaral sa Computer Systems Institute, Inc. na nais ng isang mas simple at mas epektibong paraan ng pag-aaral. Mag-browse ng mga maliit at madaling unawain na konsepto sa OOP at mga piniling, mataas na kalidad na mga resurso lahat sa isang lugar.
+
+
+Struggling with <strong>Object-Oriented Programming (OOP)?</strong> You're not alone.
+    This site is built for <strong>You</strong> and <strong>Students</strong> at <strong>Computer Systems Institute, Inc.</strong> want a simpler, more effective way to learn.
+    Browse bite-sized OOP concepts and curated, high-quality resources all in one place.
+
+-->

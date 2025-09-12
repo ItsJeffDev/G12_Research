@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OOPSphere | Literature</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="images" href="things/orange_icon.png">
+  <style>
+    body{
+      background-color: white;
+    }
+    .main-content {
+      padding: 20px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      color: #333;
+      border-radius: 12px;
+      background-color: white;
+      margin-top: 20px;
+      box-shadow: 4px 5px 15px 5px #000000;
+      transition: all 0.5s;
+    }
+    .main-content:hover{
+      transform: scale(1.005);
+      box-shadow: 2px 2px 5px 2px #000000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a class="brand">OOPSphere</a>
+
+      <div class="side">
+        <input type="checkbox" id="langToggle">
+        <button class="toggle-btn" id="menuToggle">&#9776;</button>
+      </div>
+      <ul class="nav-links desktop"
+        style="text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666, 1px 1px #000000;">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Topics</a></li>
+        <li><a href="reference.html">Reference</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Offcanvas Mobile Menu -->
+  <div class="offcanvas" id="offcanvasNav">
+    <div class="offcanvas-header">
+      <h2 style="text-shadow: 1px 1px 3px #666, -1px -1px 3px #000000, 1px 1px #666, 1px 1px #000000;">Menu</h2>
+      <button id="closeBtn">&times;</button>
+    </div>
+
+    <ul class="offcanvas-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="category.html">Topics</a></li>
+      <li><a href="reference.html">Reference</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1 data-en="OOP Sample Problems" data-tl="OOP Sample Problems" class="main-heading"></h1>
+        <h3 style="text-align: left;" data-en=" <br> <strong>PROBLEM #5 </strong>"
+    data-tl="<br> <strong>PROBLEM #5 </strong>"></h3>
+    <p style="text-align: left;">
+        You're building a system to:
+
+Manage student data
+
+Allow students to be Undergraduate or Graduate
+
+Calculate grades differently based on the student type
+
+Show student details with final grades
+    </p>
+<textarea rows="15" spellcheck="false">
+abstract class Student {
+    private String name;
+    private String studentId;
+
+    public Student(String name, String studentId) {
+        this.name = name;
+        this.studentId = studentId;
+    }
+
+    public abstract String calculateGrade();
+
+    public String getName() {
+        return name;
+    }
+
+    public String getStudentId() {
+        return studentId;
+    }
+
+    public abstract String getDetails();
+}
+
+class Undergraduate extends Student {
+    private double midtermScore;
+    private double finalExamScore;
+
+    public Undergraduate(String name, String studentId, double midterm, double finalExam) {
+        super(name, studentId);
+        this.midtermScore = midterm;
+        this.finalExamScore = finalExam;
+    }
+
+    @Override
+    public String calculateGrade() {
+        double avg = (midtermScore * 0.4) + (finalExamScore * 0.6);
+        return avg >= 60 ? "Pass" : "Fail";
+    }
+
+    @Override
+    public String getDetails() {
+        return "Undergraduate Student: " + getName() +
+               " (ID: " + getStudentId() + "), Grade: " + calculateGrade();
+    }
+}
+
+class Graduate extends Student {
+    private double projectScore;
+    private double thesisScore;
+
+    public Graduate(String name, String studentId, double project, double thesis) {
+        super(name, studentId);
+        this.projectScore = project;
+        this.thesisScore = thesis;
+    }
+
+    @Override
+    public String calculateGrade() {
+        double avg = (projectScore * 0.5) + (thesisScore * 0.5);
+        return avg >= 70 ? "Pass" : "Fail";
+    }
+
+    @Override
+    public String getDetails() {
+        return "Graduate Student: " + getName() +
+               " (ID: " + getStudentId() + "), Grade: " + calculateGrade();
+    }
+}
+
+class GradeReport {
+    private ArrayList<Student> students;
+
+    public GradeReport() {
+        students = new ArrayList<>();
+    }
+
+    public void addStudent(Student s) {
+        students.add(s);
+    }
+
+    public void showReport() {
+        System.out.println("=== Student Grade Report ===");
+        for (Student s : students) {
+            System.out.println(s.getDetails());
+        }
+        System.out.println("Total Students: " + students.size());
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        GradeReport report = new GradeReport();
+
+        Student s1 = new Undergraduate("Emily", "U101", 75, 80); // Pass
+        Student s2 = new Undergraduate("John", "U102", 50, 55);  // Fail
+        Student s3 = new Graduate("Drake", "G201", 65, 75);      // Pass
+        Student s4 = new Graduate("Sophia", "G202", 60, 65);     // Fail
+
+        report.addStudent(s1);
+        report.addStudent(s2);
+        report.addStudent(s3);
+        report.addStudent(s4);
+
+        report.showReport();
+    }
+}
+
+
+</textarea>
+<pre id="output" style="text-align: left;">
+=== Student Grade Report ===
+Undergraduate Student: Emily (ID: U101), Grade: Pass
+Undergraduate Student: John (ID: U102), Grade: Fail
+Graduate Student: Drake (ID: G201), Grade: Pass
+Graduate Student: Sophia (ID: G202), Grade: Fail
+Total Students: 4
+</pre>
+    </p> <br><hr>
+
+
+
+    <a href="sample_4.html" style="text-decoration: none;"><li class="btn-start"> <strong style="color: rgb(247, 35, 35)">Back</strong></li></a>
+    <a href="#" style="text-decoration: none; color: whitesmoke"><li class="btn-start"> <strong>Next</strong></li></a>
+
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
+
+
+
+<!--
+
+Nahihirapan kaba sa Object-Oriented Programming (OOP)? Hindi ka nag-iisa. Itong website ay iginawa para sa Iyo at para sa mga Mag-aaral sa Computer Systems Institute, Inc. na nais ng isang mas simple at mas epektibong paraan ng pag-aaral. Mag-browse ng mga maliit at madaling unawain na konsepto sa OOP at mga piniling, mataas na kalidad na mga resurso lahat sa isang lugar.
+
+
+Struggling with <strong>Object-Oriented Programming (OOP)?</strong> You're not alone.
+    This site is built for <strong>You</strong> and <strong>Students</strong> at <strong>Computer Systems Institute, Inc.</strong> want a simpler, more effective way to learn.
+    Browse bite-sized OOP concepts and curated, high-quality resources all in one place.
+
+-->
